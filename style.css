@@ -1,0 +1,242 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px; /* Increase base font size */
+    line-height: 1.6; /* Improve readability */
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 20px 40px; /* Increase padding for a larger feel */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Move the nav to the right */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+header img {
+    max-height: 80px; /* Limit logo size */
+    width: auto;
+    margin: 5px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px; /* Increase gap between nav items */
+    margin-left: 2in;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2d6a4f;
+    font-weight: bold;
+    font-size: 1.2em; /* Increase navigation font size */
+}
+
+nav ul li a.contact-btn {
+    background-color: #f4a261; /* Match "Let's Begin the Conversation" button */
+    color: #ffffff;
+    padding: 15px 25px; /* Increase button size */
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 30px; /* Add more padding */
+}
+
+.hero h1 {
+    font-size: 3em; /* Increase headline size */
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em; /* Larger paragraph text */
+    margin: 20px 0;
+}
+
+.hero button {
+    background-color: #f4a261;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px; /* Larger button */
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.about, .mission {
+    padding: 100px 40px; /* Add more padding */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about h2, .mission h2 {
+    margin-bottom: 30px; /* Increase space below headings */
+    text-align: center;
+    font-size: 2em; /* Larger headings */
+}
+
+.team-page {
+    padding: 60px 40px; /* Add more padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger team member cards */
+    gap: 50px;
+}
+
+.team-member {
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    padding: 30px; /* Increase padding */
+    border-radius: 15px; /* Larger border radius */
+    background-color: #fff;
+}
+
+.team-member img {
+    width: 180px; /* Larger images */
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 15px 0 10px;
+    font-size: 1.8em; /* Larger name font */
+}
+
+.team-member p {
+    margin: 15px 0;
+    text-align: justify;
+    font-size: 1.1em; /* Slightly larger paragraph text */
+}
+
+footer {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px; /* Add more padding */
+    font-size: 1.1em; /* Larger footer text */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    max-height: 50px; /* Adjust logo size in footer */
+    margin: 10px;
+}
+
+footer div {
+    flex: 1;
+    margin: 10px;
+}
+
+footer a {
+    color: #f4a261;
+    text-decoration: none;
+}
+
+/* Ensure responsive scaling */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive navigation menu */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: #2d6a4f;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        margin: 10px auto;
+    }
+}
+
+/* Team section responsiveness */
+@media screen and (max-width: 768px) {
+    .team-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto;
+        max-width: 95%; /* Adjust width for better spacing */
+    }
+
+    .team-member {
+        width: 100%; /* Ensure team cards stretch to fit */
+        margin-bottom: 20px;
+    }
+
+    .team-member img {
+        max-width: 150px;
+        height: auto;
+    }
+}
+
+/* Contact form layout for mobile */
+@media screen and (max-width: 768px) {
+    .contact-page {
+        margin: 10px auto;
+        padding: 20px;
+        max-width: 95%; /* Limit width for better spacing */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        font-size: 1em;
+    }
+}

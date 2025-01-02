@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneHeritage Partners</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header style="display: flex; align-items: center; padding: 20px; font-size: 1.2em;">
+        <img src="https://i.postimg.cc/8PRsR4vT/inkspace-Sideways-logo-5.png" alt="Logo" style="height: 120px;">
+        <button id="menu-toggle" style="display: none;">☰ Menu</button>
+        <nav>
+            <ul style="display: flex; gap: 40px;">
+                <li><a href="#" onclick="showTab('home')">Home</a></li>
+                <li><a href="#" onclick="showTab('team')">Team</a></li>
+                <li><a href="#contact" class="contact-btn" onclick="showTab('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="tab-content active">
+        <div class="hero">
+            <h1>Carrying the Torch of Legacy and Growth</h1>
+            <p>Your business deserves a future as strong as its legacy.</p>
+            <button onclick="showTab('contact')">Let’s Begin the Conversation</button>
+        </div>
+
+        <section class="about">
+            <h2>Who We Are</h2>
+            <p>OneHeritage Partners is dedicated to acquiring and nurturing a single, enduringly profitable business. We aim to preserve your legacy and ensure sustainable growth for generations to come.</p>
+        </section>
+
+        <section class="mission">
+            <h2>Why We Are Different</h2>
+            <p>We stand for preserving the legacy of businesses while empowering them for future success. Our vision is rooted in respect for the past and a commitment to long-term growth.</p>
+        </section>
+    </div>
+
+    <div id="team" class="tab-content">
+    <div style="background-color: #2d6a4f; color: white; padding: 20px; margin-bottom: 20px; text-align: center;">
+        <h2>Meet The Team</h2>
+        <p>Meet the Team: At OneHeritage Partners, our team combines expertise and a commitment to preserving legacies while driving innovation and sustainable growth. Meet the professionals behind our success.</p>
+    </div>
+    <div class="team-page" style="margin: 1in;">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/200" alt="Jane Doe">
+            <h3>Jane Doe</h3>
+            <p>jane.doe@example.com</p>
+            <p>(123) 456-7890</p>
+            <a href="https://linkedin.com/in/janedoe" target="_blank" style="color: black; text-decoration: none; display: block; text-align: left;">LinkedIn</a>
+            <br>
+            <p><strong>Managing Principal</strong></p>
+            <p style="text-align: left;">Jane has extensive experience in finance and operations, helping businesses achieve sustainable growth.</p>
+            <p style="text-align: left;">Her expertise includes financial planning, operational efficiency, and leadership in transitional periods, ensuring companies retain their core values while evolving to meet future challenges.</p>
+        </div>
+
+        <div class="team-member">
+            <img src="https://via.placeholder.com/200" alt="John Smith">
+            <h3>Mohsin Tariq</h3>
+            <p>john.smith@example.com</p>
+            <p>(929) 255-5785</p>
+            <a href="https://linkedin.com/in/johnsmith" target="_blank" style="color: black; text-decoration: none; display: block; text-align: left;">LinkedIn</a>
+            <br>
+            <p><strong>Managing Principal</strong></p>
+            <p style="text-align: left;">Mohsin Tariq is a Co-Founder and a Managing Partner at OneHeritage Partners. Prior to OneHeritage Partners, Mohsin was an active operator across various industries such as Logistics, Payments and Consumer Products and led impactful project at DHL, i2cinc and Nestle among others.</p>
+            <p style="text-align: left;">Entrepreneur at heart, most recently, Mohsin has been involved in the startup community where he helped launch a first commercial daycare center in a developing country and increase operational efficiency at a travel startup.</p>
+            <p style="text-align: left;">He received MBA from the Indiana University Kelley School of Business and a Bachelors of Arts in Business Administration from COMSATS University Islamabad, Pakistan.</p>
+            <p style="text-align: left;">Born in Lahore, Pakistan, he values legacy, mentorship and empowering others. He lives in New York with her wife and two children and loves to stay fit, playing soccer and cooking.</p>
+        </div>
+    </div>
+</div>
+
+
+    <div id="contact" class="tab-content">
+    <div class="contact-page" style="margin: 1.5in; padding: 0.5in; border-radius: 8px; background-color: #2d6a4f; color: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <div style="width: 45%;">
+                <h2>Contact Us</h2>
+                <p>We’d love to learn more about your story and help out in any way we can. Please fill out the form below or contact us directly.</p>
+                <p>Mohsin Tariq<br>john.smith@example.com<br>(929) 255-5785</p>
+                <p>Jane Doe<br>jane.doe@example.com<br>(123) 456-7890</p>
+                <p>123 Legacy Lane<br>Growth City, GC 45678</p>
+            </div>
+            <div style="width: 45%;">
+                <h2>Get in Touch</h2>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; gap: 40px;">
+                        <div style="flex: 1;">
+                            <label for="first-name" style="color: white;">First Name (required)</label>
+                            <input type="text" id="first-name" name="first-name" required style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label for="last-name" style="color: white;">Last Name (required)</label>
+                            <input type="text" id="last-name" name="last-name" required style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+                        </div>
+                    </div>
+                    <label for="email" style="color: white;">Email (required)</label>
+                    <input type="email" id="email" name="email" required style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label for="phone" style="color: white;">Phone (optional)</label>
+                    <input type="tel" id="phone" name="phone" style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label for="message" style="color: white;">Message (required)</label>
+                    <textarea id="message" name="message" rows="6" required style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+                    <button type="submit" style="padding: 8px 20px; font-size: 14px; background-color: #fff; color: #2d6a4f; border: none; border-radius: 4px; cursor: pointer; align-self: flex-start;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<footer style="display: flex; align-items: flex-start; padding: 30px; font-size: 1.1em;">
+    <img src="https://i.postimg.cc/8PRsR4vT/inkspace-Sideways-logo-5.png" alt="OneHeritage Partners Logo" style="height: 60px; margin-right: 20px;">
+    <div style="text-align: center; flex: 1;">
+        <p>info@oneheritagepartners.com</p>
+        <p><u>Mohsin Tariq</u> (929) 255-5785 &nbsp;&nbsp;|&nbsp;&nbsp; <u>Hassan Tariq</u> (123) 456-7890</p>
+        <p>123 Legacy Lane, Growth City, GC 45678</p>
+        <p>&copy; 2024 OneHeritage Partners. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
